@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.aa95494e.chunk.css",
+    "main.js": "/static/js/main.ee62318d.chunk.js",
+    "main.js.map": "/static/js/main.ee62318d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.84578d5e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.84578d5e.js.map",
+    "static/js/2.4a669ead.chunk.js": "/static/js/2.4a669ead.chunk.js",
+    "static/js/2.4a669ead.chunk.js.map": "/static/js/2.4a669ead.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.6dbd22426ea27ee1eeb561772ba64d13.js": "/precache-manifest.6dbd22426ea27ee1eeb561772ba64d13.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.aa95494e.chunk.css.map": "/static/css/main.aa95494e.chunk.css.map",
+    "static/js/2.4a669ead.chunk.js.LICENSE.txt": "/static/js/2.4a669ead.chunk.js.LICENSE.txt",
+    "static/media/Index.css": "/static/media/students.365629c2.jpg",
+    "static/media/DodajOglas.css": "/static/media/mobile.94ec1f3b.jpg",
+    "static/media/insta.png": "/static/media/insta.69a36267.png",
+    "static/media/logo.png": "/static/media/logo.07a0928a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.84578d5e.js",
+    "static/js/2.4a669ead.chunk.js",
+    "static/css/main.aa95494e.chunk.css",
+    "static/js/main.ee62318d.chunk.js"
+  ]
+}

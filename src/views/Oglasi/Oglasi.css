@@ -1,0 +1,14 @@
+.Oglasi {
+    margin-bottom: 10px;
+    width: 50vmax;
+}
+
+.Oglasi h1 {
+    color: #2c313f;
+}
+
+@media (max-width: 400px) {
+    .Oglasi {
+        width: 100%;
+    }
+}

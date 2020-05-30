@@ -1,0 +1,148 @@
+.Main {
+    color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 12%;
+    background-color:white ;
+}
+
+.Prijava {
+    border-radius: 50px;
+    height: 35px;
+    width: 150px;
+    background-color: #2c313f;
+    border: 1px solid #2c313f;
+    color: white;
+    transition-duration: 1s;
+}
+
+.Prijava:hover {
+    background-color: white;
+    color: gray;
+    transition-duration: 1s;
+}
+
+.Friends {
+    margin-left:-10px;
+    margin-right: -10px;
+    margin-top:-50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-image: url("../../assets/images/friends.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: white;
+
+}
+
+.Friends p {
+    text-align: center;
+    width: 50%;
+}
+
+.Misljenja {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+}
+.Misljenja p{
+    color:darkslategrey;
+}
+.Misljenja h1 {
+    color: #2c313f;
+}
+
+.ListaMisljenja {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color:black;
+}
+
+.Studenti {
+    background-image: url("../../assets/images/students.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 110%;
+    height: 500px;
+    margin-left: -10px;
+    margin-right: -10px;
+
+}
+
+.Pitanje {
+    font-size: 200%;
+    width: 60%;
+    color: #2c313f;
+    text-align: center;
+}
+
+.Registracija {
+    background-color: #2c313f;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.Registracija p {
+    width: 75%;
+}
+
+.Registracija button {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 50px;
+    height: 35px;
+    width: 150px;
+    color: #2c313f;
+    transition-duration: 1s;
+}
+
+.Text {
+    text-align: center;
+}
+
+.Registracija button:hover {
+    background-color: lightgray;
+    transition-duration: 1s;
+}
+
+@media (max-width: 400px) {
+    .Main {
+        margin-top: 20%;
+    }
+
+    .Friends {
+        background-image: url("../../assets/images/friends_mobile.jpg");
+        background-repeat: no-repeat;
+        height: 400px;
+    }
+
+    .ListaMisljenja {
+        flex-direction: column;
+    }
+
+    .Pitanje {
+        width: 100%;
+    }
+
+    .Studenti {
+        background-image: url("../../assets/images/students_mobile.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 110%;
+        height: 500px;
+    }
+}

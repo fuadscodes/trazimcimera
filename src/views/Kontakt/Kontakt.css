@@ -1,0 +1,87 @@
+.Kontakt {
+    display: flex;
+    flex-direction: column;
+}
+body{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+h1 {
+    color: #2c313f;
+}
+
+.Lower {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.DrustveneMreze {
+    width: auto;
+}
+
+.DrustveneMreze img{
+    width: 25px;
+    padding-right: 5px;
+}
+
+.Forma {
+    display: flex;
+    flex-direction: column;
+    color: grey;
+    padding-left: 15px;
+}
+
+.Forma h4{
+    color: black;
+}
+
+.Forma button {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid #2c313f;
+    background-color: #2c313f;
+    color: white;
+    height: 32px;
+    width: 80px;
+}
+
+.Forma input {
+    border: 1px solid lightgray;
+    height: 30px;
+    vertical-align: center;
+    padding-left: 4px;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+.Forma textarea {
+    width: 80%;
+    font-size: 15px;
+}
+
+.Forma input:focus, textarea:focus {
+    border: 1px solid cornflowerblue;
+}
+
+.Text {
+    width: 100%;
+    color: grey;
+}
+
+#send {
+    background-color: #2c313f;
+    border: 1px solid #2c313f;
+    color: white;
+    width: 100px;
+    text-align: center;
+}
+
+@media (max-width: 450px) {
+    .Forma {
+        padding-left: 0px;
+    }
+}

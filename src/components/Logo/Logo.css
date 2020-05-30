@@ -1,0 +1,10 @@
+.Logo {
+    display: inline-block;
+    height: 17vh;
+}
+
+@media (max-width: 450px) {
+    .Logo {
+        height: 5vh;
+    }
+}

@@ -1,0 +1,55 @@
+.Prijava {
+    display: flex;
+    flex-direction: column;
+}
+
+.Prijava h1 {
+    color: #2c313f;
+}
+
+.Prijava {
+    width: 80%;
+}
+
+.Prijava button {
+    color: white;
+    background-color: #3e69dc;
+    border: 1px solid #3e69dc;
+    border-radius: 15px;
+    width: 120px;
+    height: 30px;
+}
+
+.Forma {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    color: gray;
+}
+
+.Forma input {
+    border: 1px solid lightgray;
+    height: 30px;
+    vertical-align: center;
+    padding-left: 4px;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+.Forma label {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 450px) {
+    .Forma input {
+        width: 90%;
+    }
+
+    .Prijava {
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+    }
+}

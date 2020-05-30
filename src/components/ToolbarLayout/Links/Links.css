@@ -1,0 +1,43 @@
+.Links {
+    display:flex;
+    flex-direction: row;
+    padding-right: 70px;
+    font-size: 18px;
+    font-family: sans-serif;
+
+}
+
+.Link {
+    display: block;
+    justify-content: center;
+    align-items: right;
+    float: right;
+    margin-left: 2%;
+    margin-right:50px;
+    text-decoration: none;
+    color: white;
+    width: 85px;
+    white-space:pre;
+    word-wrap: none;
+}
+
+.Link:hover {
+    color: #3e69dc;
+}
+
+.Links input {
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+    font-size: 16px;
+}
+
+.Links input:hover {
+    color: #3e69dc;
+}
+
+@media (max-width: 450px) {
+    .Link {
+        margin: 0.9%;
+    }
+}

@@ -1,0 +1,61 @@
+.Forma {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    color: gray;
+}
+
+.CheckBox {
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+}
+
+.Forma {
+    width: 50%;
+}
+
+.Forma button {
+    color: white;
+    background-color: #3e69dc;
+    border: 1px solid #3e69dc;
+    width: 120px;
+    height: 30px;
+    border-radius: 15px;
+    margin-top: 5%;
+}
+
+h1 {
+    color: #2c313f;
+}
+
+.Forma textarea {
+    width: 100%;
+    font-size: 15px;
+}
+
+.Forma input {
+    border: 1px solid lightgray;
+    height: 30px;
+    vertical-align: center;
+    padding-left: 4px;
+    margin-bottom: 10px;
+}
+
+.Forma label {
+    margin-bottom: 10px;
+}
+
+.Image {
+    margin-top: 15px;
+}
+
+.text {
+    color: grey;
+}
+
+@media (max-width: 450px) {
+    .Forma {
+        width: 90%;
+    }
+}

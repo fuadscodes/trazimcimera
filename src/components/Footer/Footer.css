@@ -1,0 +1,18 @@
+.Footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #171725;
+    color: white;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.Footer img{
+    width: 25px;
+    padding-right: 5px;
+}

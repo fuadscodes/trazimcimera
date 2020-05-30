@@ -1,0 +1,23 @@
+.Links {
+    display:flex;
+    flex-direction: row;
+    padding-right: 70px;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.Link {
+    margin: 2%;
+    text-decoration: none;
+    color: white;
+
+}
+
+.Link:hover {
+    color: #3e69dc;
+}
+@media (max-width: 450px) {
+    .Link {
+        margin: 0.9%;
+    }
+}
