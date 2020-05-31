@@ -47,12 +47,17 @@ const Prijava = (props) => {
             }
             return res.json();
         }).then(resData => {
-            Auth.setAuth(true);
-            Cookies.set("user", {
-                token: resData.data.login.token,
-                id: resData.data.login.id,
-                username: resData.data.login.username
-            });
+            console.log();
+            if(resData.data.login !== null) {
+                Auth.setAuth(true);
+                Cookies.set("user", {
+                    token: resData.data.login.token,
+                    id: resData.data.login.id,
+                    username: resData.data.login.username
+                });
+            } else {
+                alert("Pogrešno korisničko ime ili lozinka!");
+            }
         }).catch(err => {
             console.log(err);
         });

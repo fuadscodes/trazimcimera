@@ -22,9 +22,9 @@ const Registracija = (props) => {
 
     const [selectedFile, setSelectedFile] = useState(null);
 
-    const fileSelectedHandler = (event) => {
+    /*const fileSelectedHandler = (event) => {
         setSelectedFile(event.target.files[0]);
-    }
+    }*/
 
     const handleNameChange = (event) => {
         setIme(event.target.value);

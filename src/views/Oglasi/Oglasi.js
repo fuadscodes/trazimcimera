@@ -5,35 +5,38 @@ import Oglas from "./Oglas/Oglas";
 import ToolbarLayout from "../../components/ToolbarLayout/ToolbarLayout";
 import AuthApi from "../../auth-api";
 import Cookies from 'js-cookie';
+import gql from 'graphql-tag';
+import { Query } from 'react-apollo';
 
 const Oglasi = (props) => {
 
+    const [imamStan, setImamStatn] = useState(true);
     const [oglasi, setOglasi] = useState([]);
     const Auth = React.useContext(AuthApi);
 
-    useEffect(() => {
-        setOglasi([
-            {id: 1, text: "Oglas1", telefon: "+387 65 136 937", cijena:"450KM plus režije"},
-            {id: 2, text: "Oglas2", telefon: "+387 65 136 937", cijena:"450KM plus režije"},
-            {id: 3, text: "Oglas3", telefon: "+387 65 136 937", cijena:"450KM plus režije"},
-            {id: 4, text: "Oglas4", telefon: "+387 65 136 937", cijena:"450KM plus režije"}
-        ]);
-    }, [])
+    const OGLASI_QUERY = gql`
+    query ImpressionsQuery {
+        impressions {
+            impression_id
+            contact {
+                contact_id
+                name
+                email
+                message
+            }
+        }
+    }
+`;
 
-    let sviOglasi = oglasi.map(oglas => {
-        return <Oglas
-            key={oglas.id}
-            text={oglas.text}
-            telefon={oglas.telefon}
-            cijena={oglas.cijena}
-        />
-    })
     return (
         <ToolbarLayout>
             <Main>
                 <div className={classes.Oglasi}>
+                    <div className={classes.Buttons}>
+                        <button>IMAM STAN</button>
+                        <button>NEMAM STAN</button>
+                    </div>
                     <h1>Oglasi</h1>
-                    {sviOglasi}
                 </div>
             </Main>
         </ToolbarLayout>

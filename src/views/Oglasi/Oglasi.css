@@ -3,6 +3,21 @@
     width: 50vmax;
 }
 
+.Buttons {
+    display: flex;
+    justify-content: center;
+    margin: 1%;
+}
+
+.Buttons button {
+    background-color: royalblue;
+    color: white;
+    border-color: transparent;
+    border-radius: 20px;
+    margin: 1%;
+    height: 25px;
+}
+
 .Oglasi h1 {
     color: #2c313f;
 }
