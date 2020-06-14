@@ -6,7 +6,11 @@
 }
 
 .Small {
-    font-size: 10px;
+    font-size: 12px;
+}
+
+.Middle {
+    font-size: 14px;
 }
 
 .hr {

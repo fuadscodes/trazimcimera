@@ -49,12 +49,15 @@ const Prijava = (props) => {
         }).then(resData => {
             console.log();
             if(resData.data.login !== null) {
-                Auth.setAuth(true);
+                setTimeout(function () {
+                    Auth.setAuth(true);
+                }, 1);
                 Cookies.set("user", {
                     token: resData.data.login.token,
                     id: resData.data.login.id,
                     username: resData.data.login.username
                 });
+                console.log(Auth);
             } else {
                 alert("Pogrešno korisničko ime ili lozinka!");
             }
