@@ -47,7 +47,6 @@ const Prijava = (props) => {
             }
             return res.json();
         }).then(resData => {
-            console.log();
             if(resData.data.login !== null) {
                 setTimeout(function () {
                     Auth.setAuth(true);
@@ -57,7 +56,6 @@ const Prijava = (props) => {
                     id: resData.data.login.id,
                     username: resData.data.login.username
                 });
-                console.log(Auth);
             } else {
                 alert("Pogrešno korisničko ime ili lozinka!");
             }

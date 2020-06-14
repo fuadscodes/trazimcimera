@@ -38,7 +38,7 @@ const Oglasi = (props) => {
     }
 }`;
 
-    const [type, setType] = useState(1);
+    const [type, setType] = useState(2);
     const user = Cookies.get("user");
     const token = user.toString().split('"')[3];
 
@@ -59,8 +59,8 @@ const Oglasi = (props) => {
                 <div className={classes.Oglasi}>
                     <h1>Oglasi</h1>
                     <div className={classes.Buttons}>
-                        <button onClick={() => {setType(1)}}>IMAM STAN</button>
-                        <button onClick={() => {setType(2)}}>NEMAM STAN</button>
+                        <button onClick={() => {setType(2)}}>IMAM STAN</button>
+                        <button onClick={() => {setType(1)}}>NEMAM STAN</button>
                     </div>
                     <div className={classes.ListaMisljenja}>
                         {
