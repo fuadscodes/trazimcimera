@@ -31,10 +31,14 @@ h1 {
     flex-direction: column;
     color: grey;
     padding-left: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .Forma h4{
     color: black;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .Forma button {
@@ -48,7 +52,11 @@ h1 {
     height: 32px;
     width: 80px;
 }
-
+.Forma button:hover{
+    background-color: white;
+    color: gray;
+    transition-duration: 0.5s;
+}
 .Forma input {
     border: 1px solid lightgray;
     height: 30px;
@@ -70,6 +78,9 @@ h1 {
 .Text {
     width: 100%;
     color: grey;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 #send {
@@ -78,6 +89,11 @@ h1 {
     color: white;
     width: 100px;
     text-align: center;
+}
+
+#send:hover{
+    color:black;
+    background-color: rgb(3, 3, 54);
 }
 
 @media (max-width: 450px) {

@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: column;
     color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .CheckBox {
@@ -17,16 +19,25 @@
 
 .Forma button {
     color: white;
-    background-color: #3e69dc;
+    background-color: #2c313f;
     border: 1px solid #3e69dc;
     width: 120px;
-    height: 30px;
-    border-radius: 15px;
+    height: 40px;
+    border-radius: 20px;
     margin-top: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Forma button:hover{
+    background-color: white;
+    color: gray;
+    transition-duration: 0.5s;
 }
 
 h1 {
     color: #2c313f;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .Forma textarea {
@@ -52,6 +63,8 @@ h1 {
 
 .text {
     color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 @media (max-width: 450px) {

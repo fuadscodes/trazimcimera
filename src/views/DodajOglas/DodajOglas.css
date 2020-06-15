@@ -9,6 +9,8 @@
     background-size: 110%;
     color: white;
     height: 700px;
+        font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .Forma {
@@ -18,7 +20,9 @@
 }
 
 .Forma input, textarea {
-    width: 40%
+    width: 40%;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .Forma h1 {
@@ -46,6 +50,12 @@
     width: 100px;
     height: 35px;
     margin-top: 15px;
+}
+
+.Button:hover{
+    background-color: white;
+    color: gray;
+    transition-duration: 0.5s;
 }
 
 

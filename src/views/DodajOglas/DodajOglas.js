@@ -5,8 +5,48 @@ import Footer from "../../components/Footer/Footer";
 import AuthApi from "../../auth-api";
 import Cookies from 'js-cookie';
 import { useHistory } from "react-router-dom";
+import { Mutation } from 'react-apollo'
+import gql from 'graphql-tag'
+
 
 const DodajOglas = (props) => {
+
+    const POST_MUTATION = gql`
+        mutation {
+            addPost(postInfo: {
+            author: $id,
+            post_type: $type,
+            description: $description,
+            address: $address,
+            rent: $rent,
+            num_of_roommates: $roomMates,
+            }) {
+            post_id
+            description
+            address
+            rent
+            num_of_roommates
+            author {
+                user_id
+                username
+                name
+                surname
+                city
+                address
+                email
+                bio
+                gender
+                date_of_birth
+                pr_picture_url
+                pref_roommate_num
+            }
+            post_type {
+                post_type_id
+            }
+            }
+        }
+        `
+        
 
     const Auth = React.useContext(AuthApi);
 
@@ -20,10 +60,10 @@ const DodajOglas = (props) => {
     }
 
     const handleChangeRent = (event) => {
-        setRent(event.target.value);
+        setRent(parseInt(event.target.value));
     }
     const handleChangeRomMates = (event) => {
-        setRoomMates(event.target.value);
+        setRoomMates(parseInt(event.target.value));
     }
     const handleChangeDescription = (event) => {
         setDescription(event.target.value);
@@ -31,8 +71,8 @@ const DodajOglas = (props) => {
 
     const [type, setType] = useState(1);
     const user = Cookies.get("user");
-    const id = user.toString().split('"')[7];
-    const token = user.toString().split('"')[3];
+    const id = parseInt(user.toString().split('"')[7]);
+    const token = parseInt(user.toString().split('"')[3]);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -49,12 +89,12 @@ const DodajOglas = (props) => {
                 query: `
                 mutation {
                     addPost(postInfo: {
-                    author: ${parseInt(id)},
-                    post_type: ${parseInt(type)},
-                    description: ${description}",
-                    address: ${address},
-                    rent: ${parseInt(rent)},
-                    num_of_roommates: ${parseInt(roomMates)},
+                    author: 59,
+                    post_type: 1,
+                    description: "nesto",
+                    address: "address",
+                    rent: 200,
+                    num_of_roommates: 2
                     }) {
                     post_id
                     description
@@ -82,13 +122,14 @@ const DodajOglas = (props) => {
                 }
                 `
             };
-            
+
             fetch('http://localhost:4000/graphql', {
                 method: "POST",
                 body: JSON.stringify(requestBody),
-                headers: new Headers({
-                    'Authorisation': token
-                  }), 
+                context: {headers: {
+                    "authorization": token
+                  }, 
+                }
             }).then(res => {
                 console.log(res);
                 if(res.status !== 200 && res.status !== 201) {
@@ -109,6 +150,9 @@ const DodajOglas = (props) => {
             });
         }
     }
+        
+    
+
     return (
         <ToolbarLayout>
             <div className={classes.DodajOglas}>
@@ -117,17 +161,17 @@ const DodajOglas = (props) => {
                     <h1>Objavi svoj oglas!</h1>
                     <p>Ako želite da objavite svoj oglas i ponudu za cimere, molim Vas ispunite obrazac ispod.</p>
                     <h4>Pošaljite nam poruku</h4>
-                    
-                    <label><strong>Adresa</strong> (required)</label>
+
+                    <label><strong>Adresa</strong> *obavezno*</label>
                     <input type="text" onChange={(event) => {handleChangeAddress(event)}}/>
-                    <label><strong>Broj cimera</strong> (required)</label>
+                    <label><strong>Broj cimera</strong> *obavezno*</label>
                     <input type="text" onChange={(event) => {handleChangeRomMates(event)}}/>
-                    <label><strong>Cijena</strong> (required)</label>
+                    <label><strong>Cijena</strong> *obavezno*</label>
                     <input type="text" onChange={(event) => {handleChangeRent(event)}}/>
-                    <label><strong>Vaša oglas</strong> (required)</label>
+                    <label><strong>Vaš oglas</strong> *obavezno*</label>
                     <textarea rows="7" cols="50" onChange={(event) => {handleChangeDescription(event)}}/>
                     <button className={classes.Button} onClick={event => {handleSubmit(event)}}>OBJAVI</button>
-                </div>
+                    </div>
                 <Footer/>
             </div>
 
