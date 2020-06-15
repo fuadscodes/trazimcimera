@@ -1,14 +1,9 @@
 import React, { useState } from 'react';
 import Routes from "./routes";
-import ApolloClient from 'apollo-boost';
-import { ApolloProvider } from 'react-apollo';
 import { BrowserRouter as Router } from "react-router-dom";
 import AuthApi from './auth-api';
 import Cookies from 'js-cookie';
-
-const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql'
-});
+import ApolloProvider from './components/ApolloProvider';
 
 function App() {
   const [auth, setAuth] = useState(false);
@@ -27,7 +22,7 @@ function App() {
 
   return (
     <AuthApi.Provider value={{auth, setAuth}}>
-      <ApolloProvider client={client}>
+      <ApolloProvider>
         <Router>
             <Routes/>        
         </Router>
